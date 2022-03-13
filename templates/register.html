@@ -1,0 +1,42 @@
+{% include "header.html" %}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Register Below</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Fill in the Form Below</h3>
+                </div>
+                <div class="card-body">
+                    <p style="color:red">{{ msg }}</p>
+                    <form action="/add-users-to-db" method="POST">
+                        <input type="text" name="fname" placeholder="Your First Name"><br><br>
+                        <input type="text" name="lname" placeholder="Your Last Name"><br><br>
+                        <input type="email" name="email" placeholder="Your Email Address"><br><br>
+                        <input type="password" name="password" placeholder="Create a Password"><br><br>
+                        <input type="tel" name="phone" placeholder="Your Phone Number"><br><br>
+                        <input type="submit" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Alternatively</h3>
+                </div>
+                <div class="card-body">
+                    <p>Already Registered, <a href="/login">Login </a> instead</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
